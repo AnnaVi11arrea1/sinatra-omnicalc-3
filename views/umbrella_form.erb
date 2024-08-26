@@ -7,3 +7,10 @@
   <button>Submit</button>
 
 <form>
+
+<p>You last searched for:</p>
+<ul>
+  <li><%= cookies["last_location"] %></li>
+  <li><%= cookies["last_lat"] %></li>
+  <li><%= cookies["last_lng"] %></li>
+</ul>
