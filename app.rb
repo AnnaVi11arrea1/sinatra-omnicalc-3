@@ -11,7 +11,7 @@ get("/umbrella") do
   erb(:umbrella_form)
 end
 
-get("/process_umbrella") do
+post("/process_umbrella") do
   @user_location = params.fetch("user_loc")
 
   url_encoded_string = @user_location.gsub(" ","+")
@@ -53,9 +53,7 @@ get("/process_umbrella") do
     if precip_prob > precip_prob_threshold
       any_precipitation = true
   
-      precip_time = Time.at(hour_hash.fetch("time"))
-  
-      seconds_from_now seconds_from_now / 60 / 60
+
       
     end
 
